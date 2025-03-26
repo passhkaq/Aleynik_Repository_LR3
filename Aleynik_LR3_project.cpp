@@ -9,6 +9,7 @@ void enterNumber(int& var, const string& prompt, int min, int max);
 void getNumX();
 void getNumN();
 void getFDigitX(int x);
+void getNDigitX(int x, int n);
 
 int main() {
     struct menuItem{
@@ -86,6 +87,11 @@ void getFDigitX(int x) {
     int var = 0;
     var = x / 100;
     cout << "First digit of X is " << var << endl;
+}
+
+void getNDigitX(int x, int n) {
+    int var = (n == 1) ? (x / 10) % 10 : x % 10;
+    cout << n << " digit of X is " << var << endl;
 }
 
 
