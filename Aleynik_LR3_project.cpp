@@ -21,7 +21,7 @@ int main() {
         {1, {"Enter a number X", getNumX}},
         {2, {"Enter a number N", getNumN}},
         {3, {"Find first digit of X", getFDigitX(x)}},
-        {4, {"Find N digit of X", getNDigitX}},
+        {4, {"Find N digit of X", getNDigitX(x, n)}},
     };
 
     int choice = 0;
