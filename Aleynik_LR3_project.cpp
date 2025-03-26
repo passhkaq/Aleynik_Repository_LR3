@@ -7,6 +7,7 @@ using namespace std;
 void enterNumber(int& var, const string& prompt, int min, int max);
 
 void getNumX();
+void getNumN();
 
 int main() {
     struct menuItem{
@@ -76,4 +77,8 @@ void getNumX() {
     enterNumber(x, "Enter X (100-999): ", 100, 999);
 }
 
-int x = 0;
+void getNumN() {
+    enterNumber(n, "Enter N (1-2): ", 1, 2);
+}
+
+int x = 0, n = 0;
