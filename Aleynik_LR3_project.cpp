@@ -8,6 +8,7 @@ void enterNumber(int& var, const string& prompt, int min, int max);
 
 void getNumX();
 void getNumN();
+void getFDigitX(int x);
 
 int main() {
     struct menuItem{
@@ -18,7 +19,7 @@ int main() {
     map<int, menuItem> menu {
         {1, {"Enter a number X", getNumX}},
         {2, {"Enter a number N", getNumN}},
-        {3, {"Find first digit of X", getFDigitX}},
+        {3, {"Find first digit of X", getFDigitX(x)}},
         {4, {"Find N digit of X", getNDigitX}},
     };
 
@@ -80,5 +81,12 @@ void getNumX() {
 void getNumN() {
     enterNumber(n, "Enter N (1-2): ", 1, 2);
 }
+
+void getFDigitX(int x) {
+    int var = 0;
+    var = x / 100;
+    cout << "First digit of X is " << var << endl;
+}
+
 
 int x = 0, n = 0;
